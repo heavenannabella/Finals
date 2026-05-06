@@ -1,93 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title> MOOD TRACKER SYSTEM </title>
-    
-    <style>
-      body {
-        font-family: Arial, Sans-Serif;
-        background-color: #f8f1e7;
-        text-align: 20px;
-      }
-      h1 {
-        color: #c9a66b;
-      }
-      p {
-        color: #555;
-      }
-      .moods button {
-        font-size: 30px;
-        margin: 10px;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        background-color: #ffffff;
-        transition: 0.3s;
-      }
-      
-      .moods button:hover {
-        background-color: #f0e4d7;
-        transform: scale(1.1);
-      }
-      
-      #history {
-        margin-top: 25px;
-        background: white;
-        padding: 15px;
-        box-shadow: 0 4px 10px 
-    rgba(0,0,0,0.1);
-      }
-      
-      li {
-        margin: 5px 0;
-      }
-    </style>
-  </head>
-  
+<head>
+<meta charset="UTF-8">
+<title>Mood Tracker</title>
+</head>
   <body>
-    
-    <h1>💖 My Mood Tracker 💖</h1>
-    <p>How are you feeling today?</p>
-    
+   <div class="container">
+    <h1>My Mood Tracker</h1>
+
     <div class="moods">
-    <button onclick="saveMood('😊')">😊</button>
-    <button onclick="saveMood('😐')">😐</button>
-    <button onclick="saveMood('😢')">😢</button>
-    <button onclick="saveMood('😡')">😡</button>
-  </div>
+        <button onclick="setMood('😊 Happy')">😊</button>
+        <button onclick="setMood('😤 Stressed')">😤</button>
+        <button onclick="setMood('😒 Irritated')">😒</button>
+        <button onclick="setMood('😢 Sad')">😢</button>
+        <button onclick="setMood('😡 Angry')">😡</button>
+    </div>
 
-  <div id="history">
-    <h3>📅 Mood History</h3>
-    <ul id="moodList"></ul>
-  </div>
+    <div id="result"></div>
 
-  <script>
-    function saveMood(mood) {
-      let moods = JSON.parse(localStorage.getItem("moods")) || [];
-      let date = new Date().toLocaleString();
-
-      moods.push({ mood: mood, time: date });
-
-      localStorage.setItem("moods", JSON.stringify(moods));
-      displayMoods();
-    }
-
-    function displayMoods() {
-      let moods = JSON.parse(localStorage.getItem("moods")) || [];
-      let list = document.getElementById("moodList");
-      list.innerHTML = "";
-
-      moods.forEach(entry => {
-        let li = document.createElement("li");
-        li.textContent = entry.mood + " - " + entry.time;
-        list.appendChild(li);
-      });
-    }
-
-    displayMoods();
-  </script>
-
+    <h3>History</h3>
+    <ul id="history"></ul>
+ 
+    </div>
 </body>
 </html>
+
+
