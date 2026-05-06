@@ -1,1 +1,60 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #B7D1EA; /* Nantucket Breeze */
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
 
+    .container {
+        margin-top: 60px;
+        background: #F4C9D6; /soft pastel pink/
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+        width: 80%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .moods button {
+        font-size: 25px;
+        margin: 10px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #B7D1EA;
+        transition: 0.3s;
+    }
+
+    .moods button:hover {
+        transform: scale(1.1);
+        background: #d6e6f5;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background: #F4C9D6;
+        color: #301728;
+        margin: 5px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+</style>
