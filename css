@@ -33,6 +33,14 @@
         background: #B7D1EA;
         transition: 0.3s;
     }
+    button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+        background: #ffffff;
+        cursor: pointer;
+    }
 
     .moods button:hover {
         transform: scale(1.1);
